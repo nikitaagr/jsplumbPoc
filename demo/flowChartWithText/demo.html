@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jsPlumb - flowchart demonstration</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="demotext.css" />
+  </head>
+  <body>
+    <div
+      class="container-fluid DiagramContainer"
+      style="
+        height: 98vh;
+        background: #38415f;
+        box-shadow: 0 0 90px -9px #2b314e;
+      "
+    >
+      <div id="drawingArea">
+        <div
+          class="startpoint point window node"
+          style="left: 150px; top: 20px;"
+          data-nodetype="startpoint"
+          id="startpoint"
+        >
+          Start
+        </div>
+
+        <div class="window menu" id="menuContainer">
+          <p style="text-align: center;">Menu</p>
+          <div class="menu_button_container">
+            <div class="button_add_task button menu_button">Add Name</div>
+            <div class="button_add_email button menu_button">Add Email</div>
+            <!-- <div class="button_add_decision button menu_button">
+              Add Decision
+            </div> -->
+            <div class="cust_button button menu_button">
+              Add Button
+            </div>
+            <div class="cust_file button menu_button">
+              Add File
+            </div>
+            <button id="saveButton" class="button menu_button">Save</button>
+            <button id="loadButton" class="button menu_button">Load</button>
+          </div>
+        </div>
+
+        <!--Add Name-->
+        <div
+          class="window task remove_task"
+          style="left: 120px; top: 200px; display: none;"
+          data-nodetype="task"
+          id="taskcontainer0"
+        >
+          <div class="card-header ctrl_container">
+            <div class="button_remove">x</div>
+            <div class="head">Messages</div>
+          </div>
+          <div class="card-body details_container">
+            <div class="details_container_inside">
+              <label class="detail_label"><em>Name</em></label>
+              <input value="" class="detail_text" />
+            </div>
+          </div>
+        </div>
+
+        <!--Add Email-->
+        <div
+          class="window emailBox remove_task"
+          style="left: 120px; top: 200px; display: none;"
+          data-nodetype="emailBox"
+          id="emailBoxContainer0"
+        >
+          <div class="card-header ctrl_container">
+            <div class="button_remove">x</div>
+            <div class="head">Messages</div>
+          </div>
+          <div class="card-body details_container">
+            <div class="details_container_inside">
+              <label class="detail_label"><em>Email</em></label>
+              <input value="" type="email" class="detail_text" />
+            </div>
+          </div>
+        </div>
+
+        <!--Add bbutton-->
+        <div
+          class="window btnCust remove_task"
+          style="left: 250px; top: 300px; display: none;"
+          data-nodetype="btnCust"
+          id="buttonBoxContainer0"
+        >
+          <div class="card-header ctrl_container">
+            <div class="button_remove">x</div>
+            <div class="head">Button</div>
+          </div>
+          <div class="card-body">
+            <div class="NewPieceWrapper">
+              <input
+                value=""
+                placeholder="Click here to edit"
+                class="NewPieceButton__input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--Add Media-->
+        <div
+          class="window addfile remove_task"
+          style="left: 250px; top: 300px; display: none;"
+          data-nodetype="addfile"
+          id="fileBoxContainer0"
+        >
+          <div class="card-header ctrl_container">
+            <div class="button_remove">x</div>
+            <div class="head">Media</div>
+          </div>
+          <div class="card-body details_container">
+            <div class="details_container_inside">
+              <div class="image_display">
+                <img src="/images/gallerySmallPlaceholder.png" />
+              </div>
+              <input name="file" type="file" />
+              <input
+                type="button"
+                value="Upload"
+                style="display: block; margin-top: 10px;"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--Add Decision-->
+        <div
+          class="window decision remove_task"
+          style="left: 250px; top: 300px; display: none;"
+          data-nodetype="decision"
+          id="decisioncontainer0"
+        >
+          <div class="ctrl_container">
+            <div class="button_remove">x</div>
+          </div>
+        </div>
+
+        <div
+          class="endpoint point window node"
+          style="left: 150px; top: 400px;"
+          data-nodetype="endpoint"
+          id="endpoint"
+        >
+          End
+        </div>
+      </div>
+    </div>
+    <!-- <textarea id="jsonOutput" style="width: 100%; height: 100px;"></textarea> -->
+    <script
+      src="https://code.jquery.com/jquery-1.9.1.js"
+      integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"
+      integrity="sha256-PsB+5ZEsBlDx9Fi/GXc1bZmC7wEQzZK4bM/VwNm1L6c="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/1.4.1/jquery.jsPlumb-1.4.1-all-min.js"></script>
+
+    <script src="demo.js"></script>
+
+    <!--new -->
+  </body>
+</html>

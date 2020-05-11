@@ -1,0 +1,69 @@
+.DiagramContainer {
+  background: #454b6b;
+  box-shadow: 0 0 90px -9px #2b314e;
+}
+.DiagramNode {
+  z-index: 10;
+}
+div,
+html {
+  box-sizing: border-box;
+}
+.NewChainWrapper {
+  position: relative;
+}
+
+.NewChain {
+  cursor: move;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+.Chain__ModelContainer {
+  width: 214px;
+}
+.Chain__ModelContainer__header,
+.Chain__ModelScript__header {
+  height: 40px;
+  padding: 4px 13px;
+}
+.Chain__ModelAlien__header,
+.Chain__ModelBasic__header,
+.Chain__ModelBrick__header,
+.Chain__ModelContainer__header,
+.Chain__ModelScript__header {
+  display: flex;
+  align-items: center;
+}
+.Chain__ModelAlien__icon,
+.Chain__ModelBasic__icon,
+.Chain__ModelBrick__icon,
+.Chain__ModelContainer__icon,
+.Chain__ModelScript__icon {
+  margin-right: 10px;
+  font-size: 23px;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+}
+.Chain__ModelContainer__header__content {
+  width: calc(100% - 75px);
+  margin-right: 10px;
+}
+.bp3-text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.Chain__ModelContainer__header__title {
+  margin-bottom: 0;
+}
+.Chain__ModelBasic__body,
+.Chain__ModelContainer__body {
+  background-color: #edeef9;
+  padding: 7px;
+}

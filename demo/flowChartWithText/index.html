@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jsPlumb - flowchart demonstration</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div style="width: 100%; height: 100%;">
+      <div
+        class="Diagram"
+        tabindex="0"
+        style="position: relative; width: 2000px; height: 2000px;"
+      >
+        <div
+          class="DiagramContainer"
+          style="
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-origin: 0px 0px 0px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+          "
+        >
+          <div
+            id="welcome"
+            class="DiagramNode jtk-managed jtk-draggable jtk-endpoint-anchor jtk-droppable"
+            style="position: absolute; top: 100px; left: 200px;"
+          >
+            <div
+              class="startpoint point window node"
+              style="left: 150px; top: 20px;"
+              data-nodetype="startpoint"
+              id="startpoint"
+            >
+              Start
+            </div>
+
+            <div class="window menu" style="left: 600px;" id="menuContainer">
+              <p style="text-align: center;">Menu</p>
+              <div class="menu_button_container">
+                <div class="button_add_task button menu_button">Add Name</div>
+                <div class="button_add_email button menu_button">Add Email</div>
+                <div class="button_add_decision button menu_button">
+                  Add Decision
+                </div>
+                <button id="saveButton" class="button menu_button">Save</button>
+                <button id="loadButton" class="button menu_button">Load</button>
+              </div>
+            </div>
+
+            <div class="NodeContextMenu">
+              <div class="NewChainWrapper">
+                <div class="NewChain Chain--container is-selectable">
+                  <div class="Chain__ModelContainer is-unselectable">
+                    <div class="Chain__ModelContainer__header">
+                      <div class="Chain__ModelContainer__icon"></div>
+                      <div class="Chain__ModelContainer__header__content">
+                        <h3
+                          class="Chain__ModelContainer__header__title bp3-text-overflow-ellipsis"
+                        >
+                          Welcome
+                        </h3>
+                      </div>
+                      <div
+                        class="Chain__ModelContainer__header__menu NotDraggable"
+                      >
+                        <button type="button" class="bp3-button bp3-minimal">
+                          <span icon="more" class="bp3-icon bp3-icon-more">
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="Chain__ModelContainer__body">
+                      <div
+                        class="window task"
+                        style="left: 120px; top: 200px; display: none;"
+                        data-nodetype="task"
+                        id="taskcontainer0"
+                      >
+                        <div class="ctrl_container">
+                          <div class="button_remove">x</div>
+                        </div>
+                        <div class="details_container">
+                          <label class="detail_label">Name</label>
+                          <input value="" class="detail_text" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-1.9.1.js"
+      integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"
+      integrity="sha256-PsB+5ZEsBlDx9Fi/GXc1bZmC7wEQzZK4bM/VwNm1L6c="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/1.4.1/jquery.jsPlumb-1.4.1-all-min.js"></script>
+
+    <script src="demo.js"></script>
+  </body>
+</html>
